@@ -1,7 +1,291 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Messenger - Современное общение</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+    <!-- Навигация -->
+    <nav class="bg-gray-800/80 backdrop-blur-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <svg width="32" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clipPath="url(#clip0_2_14)">
+                            <path
+                                d="M0 0C8.0064 28.2348 17.3261 56.6421 37.4223 78.9996C73.9509 119.638 121.621 118.999 172.144 118.999H301V0H0Z"
+                                fill="#A3C9FF" />
+                            <path
+                                d="M301 2.45571e-05V119H350C360.75 119 372.078 118.417 382 123.378C406.406 135.582 403 166.143 403 189V311L402.985 345C402.871 349.65 403 361 403 361C425.204 375.083 498 421 498 421C515.009 376.907 512 330.478 512 284V190C512 164.331 512.607 137.934 505.572 113C495.426 77.0403 472.568 45.8585 442 24.4383C400.394 -4.71718 349.152 2.45571e-05 301 2.45571e-05Z"
+                                fill="#A3C9FF" />
+                            <path d="M0 163V486L147 393H109V163H0Z" fill="#A3C9FF" />
+                            <path
+                                d="M403 361C403 365 403 373.5 396 381C389 388.5 381.5 393 369.5 393H207C188.444 393 147 393 147 393L4.76837e-07 486L0 512H254C299.14 512 385 512 393 508.551C439.207 499.254 479.931 464.401 498 421L403 361Z"
+                                fill="#A3C9FF" />
+                        </g>
+                    </svg>
+                    <div class="text-2xl font-bold text-[#A3C9FF]">Desert</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="openModal()" class="text-gray-300 hover:text-[#A3C9FF] transition">
+                    Загрузить
+                    </button>
+                    <a href="https://t.me/desertmessenger" target="_blank"
+                        class="text-gray-300 hover:text-[#A3C9FF] transition flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
+                        </svg>
+                        <span>Telegram</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    Общайтесь без границ с <span class="text-[#A3C9FF]">Desert</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Современный мессенджер для качественного общения, видеозвонков и совместной работы
+                </p>
+                <button id="startButton"
+                    class="bg-[#A3C9FF] text-gray-900 px-8 py-3 rounded-lg hover:bg-blue-400 transition">
+                    Начать общение
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Возможности -->
+    <section id="features" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="bg-gray-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#A3C9FF]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Звонки в хорошем качестве</h3>
+                    <p class="text-gray-400">Кристально чистое изображение и звук в ваших разговорах</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-gray-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#A3C9FF]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Создан в России</h3>
+                    <p class="text-gray-400">Разработан с учётом потребностей российских пользователей и компаний</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-gray-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#A3C9FF]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Сообщества</h3>
+                    <p class="text-gray-400">Создавайте и присоединяйтесь к сообществам по интересам</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Безопасность -->
+    <section id="security" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8 text-white">Безопасность на первом месте</h2>
+                <p class="text-gray-400 mb-8">
+                    Desert использует современные технологии шифрования для защиты ваших данных и общения.
+                    Мы позаботились о том, чтобы ваши данные были в безопасности.
+                </p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <ul class="text-left space-y-4 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="h-6 w-6 text-[#A3C9FF] mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Шифрование данных
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-6 w-6 text-[#A3C9FF] mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Защита от несанкционированного доступа
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-6 w-6 text-[#A3C9FF] mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Регулярные обновления безопасности
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок тестирования -->
+    <section class="py-20 bg-purple-900/40">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4 text-white">Станьте частью Desert уже сейчас</h2>
+                <p class="text-xl text-purple-200 mb-8">
+                    Присоединяйтесь к открытому тестированию и получите эксклюзивные привилегии после релиза
+                </p>
+                <div class="bg-purple-800/50 p-8 rounded-lg backdrop-blur-sm mb-8">
+                    <ul class="text-left space-y-4 text-purple-100">
+                        <li class="flex items-center">
+                            <svg class="h-6 w-6 text-[#A3C9FF] mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Ранний доступ к новым функциям
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-6 w-6 text-[#A3C9FF] mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Специальный значек первопроходца
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-6 w-6 text-[#A3C9FF] mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Бонусы и привилегии после релиза
+                        </li>
+                    </ul>
+                </div>
+                <p class="text-purple-300 text-sm">
+                    Количество мест ограничено. Не упустите возможность стать частью истории Desert!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <svg width="32" height="32" viewBox="0 0 512 512" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clipPath="url(#clip0_2_14)">
+                                <path
+                                    d="M0 0C8.0064 28.2348 17.3261 56.6421 37.4223 78.9996C73.9509 119.638 121.621 118.999 172.144 118.999H301V0H0Z"
+                                    fill="#A3C9FF" />
+                                <path
+                                    d="M301 2.45571e-05V119H350C360.75 119 372.078 118.417 382 123.378C406.406 135.582 403 166.143 403 189V311L402.985 345C402.871 349.65 403 361 403 361C425.204 375.083 498 421 498 421C515.009 376.907 512 330.478 512 284V190C512 164.331 512.607 137.934 505.572 113C495.426 77.0403 472.568 45.8585 442 24.4383C400.394 -4.71718 349.152 2.45571e-05 301 2.45571e-05Z"
+                                    fill="#A3C9FF" />
+                                <path d="M0 163V486L147 393H109V163H0Z" fill="#A3C9FF" />
+                                <path
+                                    d="M403 361C403 365 403 373.5 396 381C389 388.5 381.5 393 369.5 393H207C188.444 393 147 393 147 393L4.76837e-07 486L0 512H254C299.14 512 385 512 393 508.551C439.207 499.254 479.931 464.401 498 421L403 361Z"
+                                    fill="#A3C9FF" />
+                            </g>
+                        </svg>
+                        <div class="text-2xl font-bold text-[#A3C9FF]">Desert</div>
+                    </div>
+                    <p class="text-gray-400">Современное общение для современного мира</p>
+                </div>
+                <div class="text-gray-400">
+                    © <span id="currentYear"></span> Desert. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="downloadModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-white">Загрузить Desert</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-gray-300 mb-6">Выберите версию Desert для вашей операционной системы.</p>
+            <a href="https://www.dropbox.com/scl/fo/example-link" target="_blank"
+                class="block w-full bg-[#A3C9FF] text-gray-900 text-center px-6 py-3 rounded-lg hover:bg-blue-400 transition">
+                Загрузить на Dropbox
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript для работы с модальным окном -->
+    <script>
+        // Получаем элементы, используя id вместо селектора по классу
+        const modal = document.getElementById('downloadModal');
+        const downloadButton = document.getElementById('startButton');
+
+        // Функция открытия модального окна
+        function openModal() {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Функция закрытия модального окна
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Добавляем обработчик клика на кнопку
+        downloadButton.addEventListener('click', openModal);
+
+        // Закрываем модальное окно при клике вне его области
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Закрываем модальное окно при нажатии Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
